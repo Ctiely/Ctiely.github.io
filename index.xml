@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo Theme Air</title>
-    <link>http://Ctiely.github.io/</link>
+    <link>http://syui.github.io/hugo-theme-air/</link>
     <description>Recent content on Hugo Theme Air</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>All rights reserved - 2016</copyright>
     
-	<atom:link href="http://Ctiely.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://syui.github.io/hugo-theme-air/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

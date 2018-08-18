@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://Ctiely.github.io/categories/</loc>
+    <loc>http://syui.github.io/hugo-theme-air/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://Ctiely.github.io/</loc>
+    <loc>http://syui.github.io/hugo-theme-air/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://Ctiely.github.io/tags/</loc>
+    <loc>http://syui.github.io/hugo-theme-air/tags/</loc>
     <priority>0</priority>
   </url>
   
