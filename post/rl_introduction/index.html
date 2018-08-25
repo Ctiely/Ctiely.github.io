@@ -121,7 +121,7 @@
         在长期回报中添加一个折扣因子<b>&gamma;</b>，取值范围在<b>0～1</b>之间，此<b>&gamma;</b>越大就表明折扣力度越小，意味着代理更倾向于关注长期回报；反之，则更倾向于关注短期回报。
             <br>因此，期望累积折扣回报写为:<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <img class="equations" src="https://ctiely.github.io/images/equations/rl/introduction_eq2.jpg" alt="期望累积折扣回报" width="250" height="30"><br>
+            <img class="equations" src="https://ctiely.github.io/images/equations/rl/introduction_eq2.png" alt="期望累积折扣回报" width="250" height="30"><br>
         </p>
         <h5>(2)强化学习的两类任务</h5>
         <p>任务是强化学习解决的问题，任务可以分为两种类型:
@@ -145,7 +145,7 @@
       <p>每一回合的结束时刻进行计算，求得最大期望未来收益。代理在每一回合的结束时刻去计算此回合的累积回报，然后根据新得到的知识进行更新，代理将会在每一回合的迭代后作出更好的决策。
           <br>蒙特卡洛方法下，价值函数<b>V</b>的更新公式写为:<br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img class="equations" src="https://ctiely.github.io/images/equations/rl/eq3.pdf" alt="蒙特卡洛方法下，价值函数V的更新公式" width="240" height="27"><br>
+          <img class="equations" src="https://ctiely.github.io/images/equations/rl/introduction_eq3.png" alt="蒙特卡洛方法下，价值函数V的更新公式" width="240" height="27"><br>
           式中左侧的<b>V(S<sub>t</sub>)</b>表示在状态<b>S<sub>t</sub></b>时能够获得的最大期望未来回报的更新值，右侧的<b>V(S<sub>t</sub>)</b>表示在
           状态<b>S<sub>t</sub></b>时能够获得的最大期望未来回报的当前值，<b>&alpha;</b>是学习率，<b>G<sub>t</sub></b>是前面讲到的累积期望折扣回报。
       </p>
@@ -154,7 +154,7 @@
           者一步时序差分法，此种方法使代理能够在每一步完成后立刻对价值函数进行更新。<br>
           时序差分方法下，价值函数<b>V</b>的更新公式写为:<br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img class="equations" src="https://ctiely.github.io/images/equations/rl/eq4.pdf" alt="时序差分方法下，价值函数V的更新公式" width="360" height="27"><br>
+          <img class="equations" src="https://ctiely.github.io/images/equations/rl/introduction_eq4.png" alt="时序差分方法下，价值函数V的更新公式" width="360" height="27"><br>
           式中左侧的<b>V(S<sub>t</sub>)</b>仍然表示在状态<b>S<sub>t</sub></b>时能够获得的最大期望未来回报的更新值，右侧的<b>V(S<sub>t</sub>)</b>表示在状态
           <b>S<sub>t</sub></b>时能够获得的最大期望未来回报的当前值，<b>&alpha;</b>是学习率，式中的<b>R<sub>t+1</sub></b>表示在状态<b>S<sub>t</sub></b>下作出某个
           行动后可以获得的即期回报，<b>V(S<sub>t+1</sub>)</b>表示作出行动并到达新状态以后，从新状态出发可以获得的最大期望未来回报，<b>&gamma;</b>是折
@@ -170,21 +170,21 @@
       <p>基于价值的强化学习的目标就是最优化价值函数，价值函数就是代理在每个状态下所能够得到的最大期望未来回报，表示代理从状态<b>S<sub>t</sub></b>开始，
           预期在未来可以获得的累积回报。<br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img class="equations" src="https://ctiely.github.io/images/equations/rl/eq5.pdf" alt="累积期望回报" width="380" height="35"><br>
+          <img class="equations" src="https://ctiely.github.io/images/equations/rl/introduction_eq5.png" alt="累积期望回报" width="380" height="35"><br>
           代理将会根据计算得到的价值函数来作出决策，通常的决策是在每一步选择价值函数最大的状态。
       </p>
       <h6 style="font-size: 19px">2.基于策略的方法</h6>
       <p>基于策略的强化学习的目标是直接优化一个策略函数<b>&pi;(s)</b>而不是利用价值函数作出决策。策略定义了代理在某个给定的状态下将会采取
           哪种行动，通过学习策略函数，代理可以将状态映射到每个状态所对应的最优行动。<br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <img class="equations" src="https://ctiely.github.io/images/equations/rl/eq6.pdf" alt="策略函数" width="90" height="30"><br>
+          <img class="equations" src="https://ctiely.github.io/images/equations/rl/introduction_eq6.png" alt="策略函数" width="90" height="30"><br>
           通常有两种类型的策略:确定型和随机型。
           <ul>
               <li>确定型策略:对于每个给定的状态都只有唯一确定的行动。</li>
               <li>随机型策略:对于每个给定的状态，策略函数会产生该状态所对应的行动的概率分布。</li>
           </ul>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img class="equations" src="https://ctiely.github.io/images/equations/rl/eq7.pdf" alt="随机策略函数" width="250" height="30"><br>
+        <img class="equations" src="https://ctiely.github.io/images/equations/rl/introduction_eq7.png" alt="随机策略函数" width="250" height="30"><br>
         迭代得到了策略函数后，代理就可以在给定的状态下根据决策函数作出决策。
       </p>
       </p>
