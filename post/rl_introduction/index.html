@@ -149,7 +149,7 @@
           式中左侧的<b>V(S<sub>t</sub>)</b>表示在状态<b>S<sub>t</sub></b>时能够获得的最大期望未来回报的更新值，右侧的<b>V(S<sub>t</sub>)</b>表示在
           状态<b>S<sub>t</sub></b>时能够获得的最大期望未来回报的当前值，<b>&alpha;</b>是学习率，<b>G<sub>t</sub></b>是前面讲到的累积期望折扣回报。
       </p>
-      <h6 style="font-size: 19px">2.时序差分方法</h6>
+      <h6 style="font-size: 19px" id="time_difference">2.时序差分方法</h6>
       <p>与蒙特卡洛方法正好相反，时序差分法在每一步(代理每进行一个行动)都对回报进行更新，而不是等待整个回合结束以后再去更新。这种方法叫做<b>TD(0)</b>或
           者一步时序差分法，此种方法使代理能够在每一步完成后立刻对价值函数进行更新。<br>
           时序差分方法下，价值函数<b>V</b>的更新公式写为:<br>
@@ -166,7 +166,7 @@
             </p>
       <h5 id="part4">(4)强化学习解决问题的常用方法</h5>
       <p>代理通常利用两种方法来解决强化学习所需要解决的问题，分别是基于价值的方法和基于策略的方法。
-      <h6 style="font-size: 19px">1.基于价值的方法</h6>
+      <h6 style="font-size: 19px" id="value_based">1.基于价值的方法</h6>
       <p>基于价值的强化学习的目标就是最优化价值函数，价值函数就是代理在每个状态下所能够得到的最大期望未来回报，表示代理从状态<b>S<sub>t</sub></b>开始，
           预期在未来可以获得的累积回报。<br>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
