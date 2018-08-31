@@ -72,7 +72,7 @@
             <h1 class="page-title">
               <a class="btn-bootstrap-2 title-scroll" href="#content">强化学习系列</a>
           </h1>
-          <h2 class="page-description">强化学习(Reinforcement Learning)之Q-learning</h2>
+          <h2 class="page-description">强化学习(Reinforcement Learning)<br>—Q-learning</h2>
         </div>
 </div>
     <a class="scroll-down icon-arrow-left" href="#content"><span class="hidden">Scroll Down</span></a>
@@ -84,7 +84,7 @@
   <article class="post post">
 
     <header class="post-header">
-        <h1 class="post-title">(二)强化学习之Q-learning</h1>
+        <h1 class="post-title" id="q-learning">(二)强化学习之Q-learning</h1>
         <section class="post-meta">
         
 	<time class="post-date" datetime="2018-08-26">
@@ -136,7 +136,7 @@
       <ol>
           <li><b>初始化Q值表</b><br></li>
           初始化所有的<b>Q(s,a)</b>为<b>0</b>，<b>Q</b>值表共有<b>m</b>行(<b>m</b>个状态)，<b>n</b>列(每个状态对应<b>n</b>个行动)。
-          <li><b>选择行动a</b><br>
+          <li id="epsilon-greedy-strategy"><b>选择行动a</b><br>
               在当前状态<b>s</b>下基于当前的<b>Q</b>值表选择某个行动，此处我们将根据<b>epsilon greedy strategy</b>来选取行动。首先，我们需要定义一个
               探索率<b>"epsilon"</b>，这个探索率将决定我们将以多大的概率随机选取一个行动。比如探索率取0.5，就意味着我们将有50%的概率随机
               选取一个行动，有50%的概率根据当前的<b>Q</b>值表去选取一个<b>Q</b>值最大的行动。通常我们在游戏开始时选取探索率为100%，这样我们的代
